@@ -1,0 +1,43 @@
+{
+  "name": "hrr43-mvp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "start:dev": "nodemon server -i public -i src",
+    "build": "webpack -p",
+    "build:dev": "webpack -d --watch",
+    "mongo": "sudo service mongod start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbalbin3/hrr43-mvp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbalbin3/hrr43-mvp/issues"
+  },
+  "homepage": "https://github.com/jbalbin3/hrr43-mvp#readme",
+  "description": "",
+  "dependencies": {
+    "@material-ui/core": "^4.9.5",
+    "express": "^4.17.1",
+    "material-table": "^1.57.2",
+    "mongodb": "^3.5.4",
+    "mongoose": "^5.9.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}
