@@ -9,9 +9,13 @@ const JobList = ({ jobs, addJob, updateJob, deleteJob }) => {
       data: [],
     });
 
+    const [selectedRow, setRow] = useState(null);
+
     useEffect(() => {
      setState({ columns: [
-      { title: 'Company', field: 'company' },
+      { title: 'Company', field: 'company',
+
+      },
       { title: 'Job URL', field: 'job_url', render: rowData => <a href={rowData.job_url}>{rowData.job_url}</a>},
       { title: 'Contact', field: 'contact' },
       { title: 'Referred by', field: 'referred_by' },
@@ -29,9 +33,14 @@ const JobList = ({ jobs, addJob, updateJob, deleteJob }) => {
       title="Job Search Organizer"
       columns={state.columns}
       data={state.data}
+      onRowClick={((evt) => setRow)}
       options={{
         pageSize:10,
-        pageSizeOptions: [10, 20, 30]
+        pageSizeOptions: [10, 20, 30],
+        headerStyle: {
+          backgroundColor: '#447eab',
+          color: '#FFF'
+        },
       }}
       editable={{
         onRowAdd: newData =>
