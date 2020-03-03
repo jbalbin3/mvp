@@ -34,3 +34,6 @@ bower_components/
 .floobit
 .floo
 .flooignore
+
+# files not needed
+src/components/JobForm.jsx
