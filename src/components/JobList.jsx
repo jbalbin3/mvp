@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import MaterialTable from 'material-table';
-import { TableCell } from '@material-ui/core';
-
 
 const JobList = ({ jobs, addJob, updateJob, deleteJob }) => {
   // console.log('jobs', jobs);
@@ -31,6 +29,10 @@ const JobList = ({ jobs, addJob, updateJob, deleteJob }) => {
       title="Job Search Organizer"
       columns={state.columns}
       data={state.data}
+      options={{
+        pageSize:10,
+        pageSizeOptions: [10, 20, 30]
+      }}
       editable={{
         onRowAdd: newData =>
           new Promise(resolve => {

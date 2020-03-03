@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import JobList from './JobList.jsx';
 import axios from 'axios';
 
+
 const App = () => {
 
   const [jobs, setJobs] = useState([]);
@@ -79,10 +80,10 @@ const App = () => {
   }
 
   return (
-    <div>
-      {/* <JobForm handleSubmit={ handleSubmit }/> */}
-      <JobList jobs={ jobs } updateJob={ updateJob } deleteJob={ deleteJob } addJob={ addJob }/>
-    </div>
+      <div>
+        {/* <JobForm handleSubmit={ handleSubmit }/> */}
+        <JobList jobs={ jobs } updateJob={ updateJob } deleteJob={ deleteJob } addJob={ addJob }/>
+      </div>
   );
 }
 
