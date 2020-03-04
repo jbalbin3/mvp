@@ -27,5 +27,5 @@ module.exports = {
       },
     ],
   },
-  externals: ['axios'],
+  // externals: ['axios'],
 };
