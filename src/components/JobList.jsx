@@ -30,7 +30,7 @@ const JobList = ({ jobs, addJob, updateJob, deleteJob }) => {
 
   return (
     <MaterialTable
-      title="Job Search Organizer"
+      title="Job Bucket"
       columns={state.columns}
       data={state.data}
       onRowClick={((evt) => setRow)}
